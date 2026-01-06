@@ -1,6 +1,7 @@
 import ellipseGlow from "../assets/image/ellipse-glow.png";
 import ClientGeographySection from "../components/ClientGeographySection";
 import FaqsSection from "../components/FaqsSection";
+import GetStartedSection from "../components/GetStartedSection";
 import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
 import SuccessStoriesSection from "../components/SuccessStoriesSection";
@@ -20,6 +21,7 @@ export default function Home() {
       <ClientGeographySection />
       <TestimonySection />
       <FaqsSection />
+      <GetStartedSection />
     </main>
   );
 }
