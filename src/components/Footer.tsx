@@ -101,7 +101,7 @@ export default function Footer() {
       </div>
 
       <p className="text-[#5B5B5B] font-normal text-[15px] mt-10">
-        © 2024 Antartes. All rights reserved.
+        © 2026 Antartes. All rights reserved.
       </p>
     </footer>
   );

@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 
+# Unwanted lock files
+yarn.lock
+package-lock.json
