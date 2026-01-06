@@ -1,8 +1,5 @@
-import React from "react";
 import { ButtonBG } from "./ui/button";
 import getStartedImg from "../assets/image/get-started-img.png";
-
-// backdrop-filter: blur(310px)
 
 export default function GetStartedSection() {
   return (
