@@ -38,7 +38,7 @@ const stories: { image: string; title: string; description: string }[] = [
 ];
 export default function SuccessStoriesSection() {
   return (
-    <div className="py-20">
+    <div className="py-20" id="cases-section">
       <div className="px-6 md:px-20 mb-12">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <h1 className="text-4xl md:text-5xl font-bold font-poppins leading-tight">

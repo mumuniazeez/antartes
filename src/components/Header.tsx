@@ -11,8 +11,21 @@ export default function Header() {
     };
 
     window.addEventListener("scroll", handleScroll);
+    // initially check if the user has scrolled
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const scrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <header
@@ -27,24 +40,43 @@ export default function Header() {
             : "px-20 py-10 w-full"
         }`}
       >
-        <Link to="#" className="text-3xl font-raleway font-bold text-white">
+        <Link to="/" className="text-3xl font-raleway font-bold text-white">
           Antartes
         </Link>
         <nav>
           <ul className="flex gap-10 text-white">
             <li>
-              <Link to="#" className="nav-active">
+              <Link
+                to="#home"
+                className="nav-active"
+                onClick={(e) => scrollToSection(e, "home")}
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link to="#">Services</Link>
+              <Link
+                to="#services-section"
+                onClick={(e) => scrollToSection(e, "services-section")}
+              >
+                Services
+              </Link>
             </li>
             <li>
-              <Link to="#">Cases</Link>
+              <Link
+                to="#cases-section"
+                onClick={(e) => scrollToSection(e, "cases-section")}
+              >
+                Cases
+              </Link>
             </li>
             <li>
-              <Link to="#">About</Link>
+              <Link
+                to="#about-section"
+                onClick={(e) => scrollToSection(e, "about-section")}
+              >
+                About
+              </Link>
             </li>
           </ul>
         </nav>

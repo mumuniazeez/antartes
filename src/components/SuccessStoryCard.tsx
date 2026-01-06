@@ -21,10 +21,7 @@ export default function SuccessStoryCard({
         <p className="text-[14px] text-gray-600 my-4 leading-relaxed line-clamp-3">
           {story.description}
         </p>
-        <Link
-          to={"#"}
-          className="flex items-center gap-2 text-primary font-medium hover:underline"
-        >
+        <Link to={"#"} className="flex items-center gap-2 font-medium">
           Learn more <HugeiconsIcon icon={ArrowRight} size={20} />
         </Link>
       </div>

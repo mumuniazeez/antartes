@@ -1,4 +1,5 @@
 import heroSectionImg from "../assets/image/hero-section-img.png";
+import getStartedImg from "../assets/image/get-started-img.png";
 import { ButtonBG } from "./ui/button";
 
 export default function HeroSection() {
@@ -22,7 +23,16 @@ export default function HeroSection() {
             operations, and grow with your organization.
           </p>
 
-          <ButtonBG>Get Started</ButtonBG>
+          {/* To reuse the button with the image, copy the div below */}
+          <div className="w-fit">
+            <ButtonBG>Get Started</ButtonBG>
+            <img
+              src={getStartedImg}
+              alt="get-started-img"
+              className="relative left-[calc(100%-50px)]"
+              draggable={false}
+            />
+          </div>
         </div>
       </div>
     </>
