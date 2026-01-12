@@ -4,7 +4,10 @@ import GetStartedSection from "../../components/GetStartedSection";
 import { ButtonBG } from "../../components/ui/button";
 import { Check } from "@hugeicons/core-free-icons";
 
+import { useNavigate } from "react-router-dom";
+
 export default function UiUxService() {
+  const navigate = useNavigate();
   return (
     <main>
       <div className="absolute -top-20  w-full z-0">
@@ -21,7 +24,9 @@ export default function UiUxService() {
           navigate your product effortlessly while achieving their goals.
         </p>
 
-        <ButtonBG className="mx-auto">Get Started</ButtonBG>
+        <ButtonBG className="mx-auto" onClick={() => navigate("/get-started")}>
+          Get Started
+        </ButtonBG>
       </div>
       <div className="md:px-20 md:py-20 px-10 py-10 space-y-20">
         <div className="flex items-center justify-between flex-col md:flex-row gap-10">

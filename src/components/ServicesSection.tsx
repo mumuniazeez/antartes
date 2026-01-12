@@ -34,17 +34,21 @@ const services: {
     link: "/services/ui-ux",
   },
 ];
-export default function ServicesSection() {
+export default function ServicesSection({ hideText }: { hideText?: boolean }) {
   return (
     <div className="md:py-20 md:px-20 py-10 px-10" id="services-section">
-      <h2 className="text-4xl md:text-5xl font-bold font-poppins leading-tight">
-        Our Services
-      </h2>
-      <p className="text-black/60">
-        Our services are designed to help businesses and institutions build,
-        manage, and scale their digital presence with clarity and purpose. Every
-        solution is tailored to real needs, not assumptions.
-      </p>
+      {!hideText && (
+        <>
+          <h2 className="text-4xl md:text-5xl font-bold font-poppins leading-tight">
+            Our Services
+          </h2>
+          <p className="text-black/60">
+            Our services are designed to help businesses and institutions build,
+            manage, and scale their digital presence with clarity and purpose.
+            Every solution is tailored to real needs, not assumptions.
+          </p>
+        </>
+      )}
 
       <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-10">
         {services.map((service, i) => (

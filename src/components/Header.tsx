@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { ButtonBG } from "./ui/button";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Hamburger, X } from "@hugeicons/core-free-icons";
+import logo from "../assets/image/logo.svg";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,7 +63,7 @@ export default function Header() {
   return (
     <header
       className={`fixed w-full left-0 right-0 z-100! flex justify-center transition-all duration-300 ${
-        isScrolled ? (isNavOpen ? "top-0" : "top-5") : "top-0"
+        isScrolled ? (isNavOpen ? "top-0" : "top-2 md:top-5") : "top-0"
       }`}
     >
       <div
@@ -75,7 +76,7 @@ export default function Header() {
         `}
       >
         <Link to="/" className="text-3xl font-raleway font-bold text-white">
-          Antartes
+          <img src={logo} alt="Antartes Logo" draggable={false} />
         </Link>
         <nav
           className={`${
@@ -142,14 +143,21 @@ export default function Header() {
               </Link>
             </li>
             <li className="md:hidden">
-              <ButtonBG>Get Started</ButtonBG>
+              <ButtonBG onClick={() => navigate("/get-started")}>
+                Get Started
+              </ButtonBG>
             </li>
           </ul>
         </nav>
         <ButtonBG className="md:hidden" onClick={() => setIsNavOpen(true)}>
           <HugeiconsIcon icon={Hamburger} />
         </ButtonBG>
-        <ButtonBG className="hidden md:flex">Get Started</ButtonBG>
+        <ButtonBG
+          onClick={() => navigate("/get-started")}
+          className="hidden md:flex"
+        >
+          Get Started
+        </ButtonBG>
       </div>
     </header>
   );

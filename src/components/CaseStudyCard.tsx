@@ -33,7 +33,7 @@ export default function CaseStudyCard({
           to={caseStudy.link}
           className="flex items-center gap-2 font-medium"
         >
-          Learn more <HugeiconsIcon icon={ArrowRight} size={20} />
+          View All <HugeiconsIcon icon={ArrowRight} size={20} />
         </Link>
       </div>
     </Link>

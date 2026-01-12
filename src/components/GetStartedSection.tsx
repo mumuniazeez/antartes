@@ -1,7 +1,9 @@
 import { ButtonBG } from "./ui/button";
 import getStartedImg from "../assets/image/get-started-img.png";
+import { useNavigate } from "react-router-dom";
 
 export default function GetStartedSection() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="md:mx-20 mx-10 mb-20 md:px-20 px-10 py-10 bg-black  relative rounded-4xl flex flex-col overflow-hidden border border-body">
@@ -100,7 +102,9 @@ export default function GetStartedSection() {
           </p>
         </div>
         <div className="w-fit mt-15 mx-auto z-3">
-          <ButtonBG>Get Started</ButtonBG>
+          <ButtonBG onClick={() => navigate("/get-started")}>
+            Get Started
+          </ButtonBG>
           <img
             src={getStartedImg}
             alt="get-started-img"

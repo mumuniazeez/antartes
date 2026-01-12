@@ -6,6 +6,7 @@ import {
 } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import logo from "../assets/image/logo.svg";
 
 export default function Footer() {
   const { pathname } = useLocation();
@@ -22,12 +23,22 @@ export default function Footer() {
     }
     await navigate("/#" + id);
   };
+
   return (
-    <footer className="w-full pt-10 md:pt-0 md:h-[570px] bg-black text-primary  flex flex-col items-center justify-end md:-mt-55 pb-10 main-footer">
+    <footer
+      className={`w-full pt-10   bg-black text-primary flex flex-col items-center justify-end pb-10 main-footer  ${
+        pathname !== "/get-started"
+          ? "md:h-[570px] md:-mt-55 md:pt-0"
+          : "md:pt-20"
+      }`}
+    >
       <div className="flex items-center justify-center w-[90%] pb-10">
         <div className="flex w-full justify-between md:flex-row flex-col gap-y-10 md:gap-y-0">
           <div>
-            <h2 className="text-[20px] font-bold text-white">Antartes</h2>
+            <div className="flex items-center gap-x-3">
+              <img src={logo} alt="Antartes Logo" draggable={false} />
+              <h2 className="text-[24px] font-bold text-white">Antartes</h2>
+            </div>
             <p className="text-primary font-normal text-[15px] mt-5">
               We build custom software solutions that <br /> bring your ideas to
               life
@@ -106,7 +117,10 @@ export default function Footer() {
             <h3 className="text-[20px] font-bold text-white">About</h3>
             <ul className="flex flex-col mt-5 text-[14px] space-y-2">
               <li>
-                <Link to="#">Contact us</Link>
+                <Link to="/about">About us</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact us</Link>
               </li>
             </ul>
           </div>

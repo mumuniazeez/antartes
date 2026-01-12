@@ -15,7 +15,7 @@ export default function ServiceCard({
   return (
     <Link
       to={service.link}
-      className="flex flex-col bg-white group hover:bg-black hover:text-white transition-all duration-300 p-10 rounded-2xl hover:rotate-[-4.34deg]"
+      className="flex flex-col bg-white group hover:bg-black hover:text-white transition-all duration-300 p-10 rounded-2xl hover:rotate-[-4.34deg] border border-body"
     >
       <HugeiconsIcon icon={service.icon} />
       <h3 className="text-2xl font-semibold mt-4">{service.title}</h3>

@@ -12,13 +12,13 @@ const testimonials: {
       "We tried multiple digital marketing strategies in the past, but none delivered the results we were aiming for. After just one session with Antartes, our online presence and engagement improved significantly. The difference was clear almost immediately, and the impact exceeded our expectations.",
   },
   {
-    name: "Akalugwu Chidebere",
-    position: "Product Designer",
+    name: "Akalugwu Bisola",
+    position: "House Wife",
     testimonial:
       "Working with Antartes brought clarity to our digital strategy. Their approach was structured, thoughtful, and focused on real results. We saw noticeable improvements in performance and engagement shortly after implementation.",
   },
   {
-    name: "Edunfunke Sunshine",
+    name: "Edunfunke Maxwell",
     position: "CEO, TechFirm Tech Agency",
     testimonial:
       "Antartes took the time to understand our goals before offering solutions. The outcome was a well-designed digital system that improved our workflow and strengthened our online presence.",

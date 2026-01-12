@@ -1,8 +1,10 @@
 import heroSectionImg from "../assets/image/hero-section-img.png";
 import getStartedImg from "../assets/image/get-started-img.png";
 import { ButtonBG } from "./ui/button";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
+  const navigate = useNavigate();
   return (
     <>
       <img
@@ -25,7 +27,9 @@ export default function HeroSection() {
 
           {/* To reuse the button with the image, copy the div below */}
           <div className="w-fit">
-            <ButtonBG>Get Started</ButtonBG>
+            <ButtonBG onClick={() => navigate("/get-started")}>
+              Get Started
+            </ButtonBG>
             <img
               src={getStartedImg}
               alt="get-started-img"
